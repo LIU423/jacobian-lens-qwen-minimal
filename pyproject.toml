@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools==75.8.0", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jlens-qwen-minimal"
+version = "0.1.0"
+description = "Minimal reproducible Jacobian-lens method reproduction on Qwen"
+requires-python = ">=3.9,<3.13"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

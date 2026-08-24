@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "experiment_id": "qwen25_05b_spider_2x8_words_v1",
+  "seed": 20260824,
+  "model": {
+    "id": "Qwen/Qwen2.5-0.5B-Instruct",
+    "revision": "c89bee90d9f811437d9735454613c35b4a3c4dc8",
+    "dtype": "float32",
+    "attention_implementation": "eager",
+    "trust_remote_code": false
+  },
+  "tokenization": {
+    "add_special_tokens": false,
+    "max_length": 64,
+    "truncation": true
+  },
+  "data": {
+    "calibration_path": "data/calibration.jsonl",
+    "evaluation_path": "data/evaluation.jsonl",
+    "license": "Synthetic text authored for this repository; CC0-1.0"
+  },
+  "fit": {
+    "samples_per_prompt": 4,
+    "position_sampling": "uniform_causal",
+    "random_vector": "rademacher",
+    "include_self_position": true
+  },
+  "evaluation": {
+    "top_k": 10,
+    "middle_layer_fraction": [0.3333333333, 0.6666666667],
+    "answer_rank_threshold": 10
+  }
+}
